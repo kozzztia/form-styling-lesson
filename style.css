@@ -1,6 +1,10 @@
 :root {
     --bg-color: rgba(255, 205, 90, 0.6);
-    --shadow: 5px 1px 5px #000;
+    --bg-element: #329fff5a;
+    --bg-btn: #329fff;
+    --shadow: 1px 1px 1px #000;
+    --padding: 10px;
+}
 
     * {
         padding: 0;
@@ -23,20 +27,27 @@
         align-items: center;
         gap: 30px;
     }
+   
     form {
-        width: 570px;
-        height: 590px;
+        max-width: 570px;
+        min-height: 590px;
         background: url('assets/black-peppercorn-8337820_1280.webp') no-repeat center center;
-        background-size: 100% 100%;
+        background-size: cover;
         border-radius: 8px;
+    
         display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+        gap: var(--padding);
+    
+        padding: 35px;
         box-shadow: var(--shadow);
-
+        filter: sepia(60%);
+    
         h2 {
-            width: 100%;
+            flex-basis: 100%;
             text-align: start;
             font-size: 24px;
             font-weight: 500;
@@ -44,5 +55,65 @@
             color: #fff;
             text-shadow: var(--shadow);
         }
-
+        span{
+            flex-basis: 100%;
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: -0.2px;
+            color: #fff;
+            text-shadow: var(--shadow);
+            cursor: pointer;
+        }
+        label{
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-element);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            padding: var(--padding);
+        }
+        input{
+            padding: var(--padding);
+        }
+        label:has(input[type="text"]), label:has(select) {
+            flex-basis: calc(50% - var(--padding)/2);
+        }
+        label:has(input[type="email"]) {
+            flex-basis: 100%;
+        }
+        &>span{
+            flex-basis: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: var(--padding);
+            label{
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+            }
+        }
+        button{
+            flex-basis: 100%;
+            background: var(--bg-btn);
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            padding: var(--padding);
+            cursor: pointer;
+            color: #fff;
+            text-shadow: var(--shadow);
+            box-shadow: var(--shadow);
+        }
+        p{
+            width: 100%;
+            text-align: center;
+            text-shadow: var(--shadow);
+        }
     }
+    
+

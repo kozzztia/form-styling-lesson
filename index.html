@@ -12,7 +12,56 @@
     <main>
         <form>
             <h2>Create an Account</h2>
+            <label>
+                <span>First Name</span>
+                <input type="text" required name="first-name">
+            </label>
+            <label>
+                <span>Last Name</span>
+                <input type="text" required name="last-name">
+            </label>
+            <label>
+                <span>E-mail</span>
+                <input type="email" required name="email">
+                <span>We'll never share your email with anyone else.</span>
+            </label>
+            <span>
+                <label>
+                    <input type="radio" value="male" name="gender" />
+                    <span>мужской</span>
+                </label>
+                <label>
+                    <input type="radio" value="female" name="gender" />
+                    <span>женский</span>
+                </label>
+            </span>
 
+            <label>
+                <span>Country</span>
+                <select>
+                    <option>Ukraine</option>
+                    <option>England</option>
+                    <option>China</option>
+                </select>
+            </label>
+            <label>
+                <span>City</span>
+                <input type="text" required name="last-name">
+            </label>
+
+            <button type="submit">Sing up</button>
+
+            <p>
+                By clicking the 'Sign Up' button, you confirm that you accept our
+                <a href="">Terms of Use</a>
+                <a href="">Privacy Policy</a>
+                and.
+            </p>
+
+            <p>
+                Have an account?
+                <a href="">Log In</a>
+            </p>
         </form>
 
         <form>
