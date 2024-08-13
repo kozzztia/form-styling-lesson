@@ -79,6 +79,9 @@
         input, select{
             padding: var(--padding);
         }
+        input[type="radio"]{
+            margin-right: var(--padding);
+        }
         label:has(input[type="text"]), label:has(select) {
             flex-basis: calc(50% - var(--padding)/2);
         }
