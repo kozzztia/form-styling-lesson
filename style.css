@@ -44,7 +44,7 @@
     
         padding: 35px;
         box-shadow: var(--shadow);
-        filter: sepia(60%);
+        filter: sepia(50%);
     
         h2 {
             flex-basis: 100%;
@@ -75,7 +75,7 @@
             overflow: hidden;
             padding: var(--padding);
         }
-        input{
+        input, select{
             padding: var(--padding);
         }
         label:has(input[type="text"]), label:has(select) {
